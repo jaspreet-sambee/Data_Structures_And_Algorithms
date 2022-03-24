@@ -1,0 +1,26 @@
+1) WHat is the runtime for BST?
+
+--> N is the length of our input list.
+Our tree will be logN levels deep, meaning there will logN times where a new parent-child relationship is created.
+If we have an 8 element list, the tree is 3 levels deep: 2**3 == 8.
+Each recursive call is going to copy approximately N elements when the left and right halves of the list are passed to the recursive calls. We’re reducing by 1 each time (the middle_value), but that’s a constant factor.
+Putting that together, we have N elements being copied logN levels for a big O of N*logN.
+
+2) Different types of runtimes:
+
+Θ(1). This is constant runtime. This is the runtime when a program will always do the same thing regardless of the input. For instance, a program that only prints “hello, world” runs in Θ(1) because the program will always just print “hello, world”.
+Θ(log N). This is logarithmic runtime. You will see this runtime in search algorithms.
+Θ(N). This is linear runtime. You will often see this when you have to iterate through an entire dataset.
+Θ(N*logN). You will see this runtime in sorting algorithms.
+Θ(N2). This is an example of a polynomial runtime. You will see this runtime when you have to search through a two-dimensional dataset (like a matrix) or nested loops.
+Θ(2N). This is exponential runtime. You will often see this runtime in recursive algorithms (Don’t worry if you don’t know what that is yet!).
+Θ(N!). This is factorial runtime. You will often see this runtime when you have to generate all of the different permutations of something. For instance, a program that generates all the different ways to order the letters “abcd” would run in this runtime.
+
+3) What is the big O runtime of getting a value from a HashMap?
+The size of the hashmap has no impact on the retrieval of values from the hashmap. So it is O(1).
+
+4) Sorting time and space complexity 
+	        Best Case	Worst Case	Average Case	Space Complexity
+Bubble Sort	Ω(n)	    O(n^2)	      O(n^2)	     O(1)
+Merge Sort	Ω(n log n)	O(n log n)	O(n log n)	     O(n)
+Quicksort	Ω(n log n)	O(n^2)	     O(n log)	     O(log n)
